@@ -1,7 +1,17 @@
+import CardTask from "../cardTask";
+
 const Home = () => {
     return (
         <div>
-            <p>Tela Inicial</p>
+            <header>
+                <h1>Planner</h1>
+            </header>
+            <body>
+                <CardTask />
+            </body>
+            <footer>
+                @copyright
+            </footer>
         </div>
     )
 }

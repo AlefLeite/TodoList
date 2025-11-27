@@ -1,0 +1,19 @@
+{
+  "atividades": [
+    {
+      "id": 1,
+      "nome": "Atividade 1",
+      "repete": 2
+    },
+    {
+      "id": 2,
+      "nome": "Atividade 2",
+      "repete": 2
+    },
+    {
+      "id": 3,
+      "nome": "Atividade 3",
+      "repete": 2
+    }
+  ]
+}
