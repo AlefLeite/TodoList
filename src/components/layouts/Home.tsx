@@ -1,19 +1,16 @@
 import CardTask from "../cardTask";
+import Header from "./Header";
+import { ContainerHome, Content } from "./styles/Home.styles";
 
 const Home = () => {
-    return (
-        <div>
-            <header>
-                <h1>Planner</h1>
-            </header>
-            <body>
-                <CardTask />
-            </body>
-            <footer>
-                @copyright
-            </footer>
-        </div>
-    )
-}
+  return (
+    <ContainerHome>
+      <Header />
+      <Content>
+        <CardTask />
+      </Content>
+    </ContainerHome>
+  );
+};
 
 export default Home;
