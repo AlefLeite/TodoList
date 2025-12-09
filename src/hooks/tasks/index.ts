@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NewTask } from "../../interfaces/tasks.interface";
 
 interface Tasks {
   id: number;
@@ -17,10 +18,23 @@ const useTasks = () => {
     setTasks(lista);
   };
 
+  const adicionarTask = async (newTask: NewTask) => {
+    const response = await fetch("http://localhost:3001/atividades", {
+      method: 'POST',
+      headers: {
+      "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newTask)
+    })
+
+    console.log(response)
+  }
+
   return {
     tasks,
     setTasks,
     listarTasks,
+    adicionarTask,
   };
 };
 
