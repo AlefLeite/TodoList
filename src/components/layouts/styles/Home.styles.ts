@@ -10,5 +10,6 @@ export const ContainerHome = styled.div`
 export const Content = styled.div`
   display: flex;
   margin-left: 15%;
+  margin-right: 15%;
   margin-top: 5vh;
 `;

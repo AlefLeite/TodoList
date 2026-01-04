@@ -1,24 +1,9 @@
 {
   "atividades": [
     {
-      "id": "1",
-      "nome": "Atividade 1",
-      "repete": 2
-    },
-    {
-      "id": "ab5b",
-      "nome": "teste cadastro",
-      "repete": 1
-    },
-    {
-      "id": "5c9c",
-      "nome": "teste 2",
-      "repete": 1
-    },
-    {
-      "id": "1a50",
-      "nome": "Tarefa nova",
-      "repete": 2
+      "id": "df2b",
+      "nome": "Teste 2",
+      "repete": 0
     }
   ]
 }

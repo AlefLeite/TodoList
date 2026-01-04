@@ -10,7 +10,19 @@ export const Card = styled.div`
     margin-bottom: 10px;
 `
 
+export const LineCard = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
 export const TitleCard = styled.span`
     font-weight: 600;
     font-size: 18px;
+`
+
+export const Deletebutton = styled.span`
+    margin-top: 1px;
+    padding: 3px;
+    /* border: 2px solid #f7213d;
+    border-radius: 10px; */
 `

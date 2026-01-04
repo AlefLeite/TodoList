@@ -22,12 +22,31 @@ const useTasks = () => {
     const response = await fetch("http://localhost:3001/atividades", {
       method: 'POST',
       headers: {
-      "Content-Type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(newTask)
     })
 
-    console.log(response)
+    if (response.ok){
+      listarTasks();
+      console.log("Atividade adicionada com sucesso");
+    } else {
+      console.error("Erro ao adicionar task");
+    }
+  }
+
+  const deleteTask = async (taskId: number) => {
+    const response = await fetch(`http://localhost:3001/atividades/${taskId}`, {
+      method: 'DELETE'
+    }
+    );
+
+    if (response.ok) {
+      listarTasks();
+      console.log("Tarefa deletada com sucesso");
+    } else {
+      console.error("Erro ao deletar tarefa");
+    }
   }
 
   return {
@@ -35,6 +54,7 @@ const useTasks = () => {
     setTasks,
     listarTasks,
     adicionarTask,
+    deleteTask,
   };
 };
 

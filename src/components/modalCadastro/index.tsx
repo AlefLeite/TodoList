@@ -9,8 +9,8 @@ interface ModalProps {
 }
 
 export const Modal = ({ open, onClose }: ModalProps) => {
-  const [form, setForm] = useState<NewTask>({})
-  const { adicionarTask } = useTasks()
+  const [form, setForm] = useState<NewTask>({});
+  const { adicionarTask } = useTasks();
 
   const addTask = async () => {
     await adicionarTask(form);

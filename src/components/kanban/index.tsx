@@ -1,18 +1,19 @@
 import { useState } from "react";
 import CardTask from "../cardTask";
 import { Modal } from "../modalCadastro";
+import { ButtonAddTask, Container } from "./styles/index.styles";
 
 const Kanban = () => {
 
     const [ newTask, setNewTask] = useState(false);
 
     return(
-        <div>
-            <p>Dashboard</p>
-            <button onClick={() => setNewTask(true)}>Adicionar Atividade</button>
+        <Container>
+            <h2>Dashboard</h2>
+            <ButtonAddTask onClick={() => setNewTask(true)}>Adicionar Atividade +</ButtonAddTask>
             <CardTask />
             <Modal open={newTask} onClose={() => setNewTask(false)}/>
-        </div>
+        </Container>
     )
 }
 
