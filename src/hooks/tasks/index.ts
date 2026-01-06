@@ -1,11 +1,6 @@
 import { useState } from "react";
-import { NewTask } from "../../interfaces/tasks.interface";
-
-interface Tasks {
-  id: number;
-  nome: string;
-  repete: number;
-}
+import { NewTask, Tasks } from "../../interfaces/tasks.interface";
+import { toast } from "react-toastify";
 
 const useTasks = () => {
   const [tasks, setTasks] = useState<Tasks[] | []>([]);
@@ -29,9 +24,9 @@ const useTasks = () => {
 
     if (response.ok){
       listarTasks();
-      console.log("Atividade adicionada com sucesso");
+      toast.success("Atividade adicionada")
     } else {
-      console.error("Erro ao adicionar task");
+      toast.error("Erro ao adicionar atividade")
     }
   }
 
@@ -43,9 +38,9 @@ const useTasks = () => {
 
     if (response.ok) {
       listarTasks();
-      console.log("Tarefa deletada com sucesso");
+      toast.success("Atividade excluida");
     } else {
-      console.error("Erro ao deletar tarefa");
+      toast.error("Erro ao excluir atividade")
     }
   }
 

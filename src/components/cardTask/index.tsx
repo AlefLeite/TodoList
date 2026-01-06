@@ -1,18 +1,14 @@
-import { useEffect } from "react";
-import useTasks from "../../hooks/tasks"
+import { FC } from "react";
+import { Tasks } from "../../interfaces/tasks.interface";
 import { Card, Deletebutton, LineCard, TitleCard } from "./styles"
 import { FaTrashAlt } from "react-icons/fa";
 
-const CardTask = () => {
-    const { listarTasks, tasks, deleteTask } = useTasks();
+interface Props {
+    tasks: Tasks[];
+    deleteTask: ( id: number) => Promise<void>
+}
 
-    useEffect(() => {
-        listarTasks();
-    }, []);
-
-    useEffect(() => {
-        console.log("Atividades atualizadas", tasks);
-    }, [tasks]);
+const CardTask: FC<Props> = ({ tasks, deleteTask }) => {
 
     const tipoTask = (tipo: number) => {
         switch(tipo){
@@ -37,14 +33,13 @@ const CardTask = () => {
                                 <TitleCard>{task.nome}</TitleCard>
                                 <Deletebutton onClick={() => deleteTask(task.id)}><FaTrashAlt color="#f7213d" /></Deletebutton>
                             </LineCard>
-                            <span>se repete {tipoTask(task.repete)}</span>
+                            <p>{task.descricao}</p>
+                            <span>se repete {tipoTask(task.tipo)}</span>
                         </Card>
                     ))
 
             }
         </>
-
-
     )
 }
 

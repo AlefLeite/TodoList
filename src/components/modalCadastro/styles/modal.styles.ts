@@ -67,3 +67,11 @@ export const SubmitButton = styled.button`
     padding: 4px;
     background-color:rgb(216, 255, 224);
 `
+
+export const DescricaoTask = styled.textarea`
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid #111111;
+    row-gap: 2;
+    width: 60%;
+`

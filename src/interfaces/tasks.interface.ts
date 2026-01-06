@@ -1,4 +1,12 @@
 export interface NewTask {
-    nome?: string;
-    repete?: number;
+  nome?: string;
+  tipo?: number;
+  descricao?: string;
+}
+
+export interface Tasks {
+  id: number;
+  nome: string;
+  tipo: number;
+  descricao: string
 }
